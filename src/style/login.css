@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    
+
+}
+
+.login {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.login .login-img{
+    display: flex;
+    width: 35vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3rem;
+    
+}
+
+
+.login .login-img img{
+    max-width: 40vw;
+    max-height: 70vh;
+    
+}
+
+.login #line{
+    width: 0.15rem;
+    height: 100vh;
+    background-color: #B8B6B6;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.login form{
+    position: relative;
+    display: flex;
+    width: 35vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login form h3{
+    width: 25vw;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    
+}
+
+.login form label{
+    position: relative;
+    right: 11rem;
+    font-size: 2rem;
+}
+
+.login form input{
+    background-color: #EEEEEE;
+    margin-bottom: 2.5rem;
+    width: 453px;
+    height: 71px;
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    
+}
+
+.login form .buttons-form{
+    width: 23vw;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+.login form .buttons-form #auth{
+    width: 210px;
+    height: 52px;
+    border-radius: 1.4rem;
+    border: none;
+    outline: none;
+    background-color: #00DFC0;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+}
+
+.login form .buttons-form #register{
+    width: 210px;
+    height: 52px;
+    border-radius: 1.4rem;
+    border: none;
+    outline: none;
+    background-color: #00705E;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    
+}
+
+.login form .buttons-form #auth:hover{
+    transition: all .5s;
+    color: #FFFFFF;
+}
+
+.login form .buttons-form #register:hover{
+    transition: all .5s;
+    color: #000000;
+}

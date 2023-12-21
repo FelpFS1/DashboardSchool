@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+header{
+    position: relative;
+    width: 100vw;
+    height: 7vh;
+    background-color: gray;
+    display: flex;
+}
+
+a{
+    position: absolute;
+    text-decoration: none;
+    color: #FFF;
+    right: 10px;
+    top: 20px;
+}
