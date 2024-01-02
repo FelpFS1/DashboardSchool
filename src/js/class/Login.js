@@ -25,7 +25,7 @@ export class Login {
           });
           document.querySelector(".loading").classList.remove("show-loading");
           window.location.replace(
-            "http://127.0.0.1:5500/src/pages/dashboard.html"
+            "./dashboard.html"
           );
         }, 4000);
       })
