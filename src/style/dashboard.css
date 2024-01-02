@@ -1,0 +1,394 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #343a40;
+}
+
+.dashboard-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.dashboard-container:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #007bff;
+}
+
+.header nav i{
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #007bff;
+  background: #e9ecef;
+  margin-bottom: 10px;
+  padding: 11px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 45%;
+  right: 0.5rem;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.teacher-info {
+  width: 120px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.teacher-info .fa-chalkboard-teacher{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #007bff;
+  font-size: 1.4rem;
+ 
+}
+
+.teacher-info .fa-chalkboard-teacher #name-teacher{
+  width: 100px;
+  height: 1rem;
+  color: #343a40;
+  font-size: 1rem;
+}
+
+.students-list {
+  margin-top: 30px;
+}
+
+nav #add-studentbtn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.7rem;
+  text-align: center;
+  color: #007bff;
+  background: #e9ecef;
+  margin-bottom: 10px;
+  padding: 11px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 120%;
+  right: 0.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  
+}
+
+.students-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.students-list li {
+  position: relative;
+  background: #e9ecef;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+i:hover,.students-list #add-studentbtn:hover,.header nav:hover {
+  background: #ced4da;
+  cursor: pointer;
+}
+
+
+.students-list li i {
+  margin-right: 2px;
+  color: #007bff;
+}
+
+.students-list .loading {
+  display: none;
+   position: absolute;
+   min-width: 30vw;
+   height: 200px;
+   top: 30vh;
+   left: 16vw;
+   text-align: center;
+   padding: 20px;
+   border-radius: 10px;
+   z-index: 10;
+ }
+ 
+
+ .students-list .loading p{
+  font-size: larger;
+ }
+ 
+ .students-list .show-loading {
+   display: block;
+ }
+ 
+ .students-list .loading .lds-dual-ring {
+   position: relative;
+   margin: auto;
+   width: 90px;
+   height: 90px;
+ }
+ .students-list .loading .lds-dual-ring:after {
+   content: " ";
+   display: block;
+   width: 64px;
+   height: 64px;
+   margin: 8px;
+   border-radius: 50%;
+   border: 6px solid #bd2020;
+   border-color: #bb1010 transparent #bb1010 transparent;
+   animation: lds-dual-ring 1.2s linear infinite;
+ }
+
+ @keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.students-list #add-students h2,.students-list #edit-students h2{
+  max-width: 600px;
+  text-align: center;
+}
+.students-list #add-students,.students-list #edit-students {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  top: 12rem;
+  right: 3.5px;
+  border: 0.5px solid #343a40;
+  transition: 1s all ease-in-out;
+  
+}
+
+.students-list #add-students form,.students-list #edit-students form{
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 40vh;
+  padding: 14px;
+ 
+}
+
+.grades {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grades label,
+.grades input {
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.students-list #add-students label,.students-list #edit-students label {
+  font-size: 1.3rem;
+}
+
+.students-list #add-students input,.students-list #edit-students input {
+  background: #e9ecef;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+}
+
+.students-list form .btn-form {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#add-students form .btn-form input[type="submit"],#edit-students form .btn-form input[type="submit"] {
+  background-color: #01b399;
+}
+
+#add-students form .btn-form input[type="button"],#edit-students form .btn-form input[type="button"] {
+  background-color: #d32219;
+}
+
+
+#ul-students .situation{
+  position: relative;
+  left: 40%;
+}
+#ul-students .situation-student{
+  position: absolute;
+  left: 50%;
+  max-width: 100px;
+  padding: 0.3rem;
+  border-radius: 40px;
+  color: #FFFF;
+  text-align: center;
+  font-weight: bold;
+}
+
+#ul-students li button[title="edit"]{
+  position: absolute;
+  background-color: transparent;
+  left: 60%;
+  border: 1px solid #ced4da;
+  border-radius: 30px;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1.2rem;
+  bottom: 0.1rem;
+  cursor: pointer;
+}
+
+#ul-students li button[title="delete"]{
+  position: absolute;
+  background-color: transparent;
+  left: 65%;
+  border: 1px solid #ced4da;
+  border-radius: 30px;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1.2rem;
+  bottom: 0.1rem;
+  cursor: pointer;
+}
+
+#ul-students li button[title="show"]{
+  position: absolute;
+  background-color: transparent;
+  left: 70%;
+  border: 1px solid #ced4da;
+  border-radius: 30px;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 1.2rem;
+  bottom: 0.1rem;
+  cursor: pointer;
+}
+
+
+/* Sessão de responsividade */
+
+/* Media Query */
+@media only screen and (max-width: 1280px) {
+  .header {
+    margin-bottom: 5rem;
+  }
+  .header nav {
+    width: 1rem;
+    height: 1rem;
+    font-size: 2rem;
+    color: #007bff;
+    top: 50%;
+    right: 0.3rem;
+  }
+  .students-list #add-studentbtn {
+    width: 1rem;
+    height: 1rem;   
+    padding: 12px;
+    top: 25%;
+    
+  }
+  .students-list .loading {
+     top: 30vh;
+     left: 30.6vw;
+  
+   }
+
+  #ul-students .situation-student{
+    position: absolute;
+    left: 40%;
+    font-size: 0.7rem;
+    border-radius: 40px;
+    color: #FFFF;
+    text-align: center;
+    font-weight: bold;
+  } 
+
+  #ul-students li button{
+    position: absolute;
+    left: 60%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    bottom: 0.2rem;
+  }
+
+
+  #ul-students li button[title="edit"]{
+    position: absolute;
+    background-color: transparent;
+    left: 60%;
+    border: 1px solid #ced4da;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1.2rem;
+    bottom: 0.1rem;
+    cursor: pointer;
+  }
+  
+  #ul-students li button[title="delete"]{
+    position: absolute;
+    background-color: transparent;
+    left: 72%;
+    border: 1px solid #ced4da;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1.2rem;
+    bottom: 0.1rem;
+    cursor: pointer;
+  }
+  
+  #ul-students li button[title="show"]{
+    position: absolute;
+    background-color: transparent;
+    left: 84%;
+    border: 1px solid #ced4da;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 1.2rem;
+    bottom: 0.1rem;
+    cursor: pointer;
+  }
+  
+}

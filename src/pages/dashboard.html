@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../style/dashboard.css">
+      <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+      <script
+      src="https://kit.fontawesome.com/456995a0f4.js"
+      crossorigin="anonymous"
+    ></script>
+      <title>Dashboard do Professor</title>
+</head>
+<body>
+      <div class="dashboard-container">
+        <header class="header blur">
+          <h1>Dashboard do Professor</h1>
+          <nav>
+            <i class="fa-solid fa-right-from-bracket logout"></i>
+            <i id="add-studentbtn"  class="fa-solid fa-person-circle-plus"></i>
+          </nav>
+          <div class="teacher-info">
+            <p ><i class="fas fa-chalkboard-teacher"><span id="name-teacher"></span></i> </p>
+            
+          </div>
+        </header>
+        <main class="students-list">
+          <h2 class="blur">Lista de Alunos</h2>
+          <ul id="ul-students" class="blur">
+            
+          </ul>
+          <div class="loading">
+            <p >Saindo....!</p>
+            <div class="lds-dual-ring"></div>
+          </div>
+          <div id="add-students">
+            <h2>Adicione os dados do aluno:</h2>
+            <form action="" id="form-student">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" required>
+            <div class="grades">
+              <label for="note1">Nota 1:</label>
+              <input type="number" id="note1" required>
+              <label for="note2">Nota 2:</label>
+              <input type="number" id="note2" >
+              <label for="note3">Nota 3:</label>
+              <input type="number" id="note3">
+              <label for="note4">Nota 4:</label>
+              <input type="number" id="note4">
+            </div>
+            <div class="btn-form">
+              <input type="submit">
+              <input type="button" value="Cancelar" id="cancel-add">
+             </div>
+            </form>
+          </div>
+            <div id="edit-students">
+              <h2>Edite ou adicione novos dados:</h2>
+              <form action="" id="form-edit-student">
+              <label for="name">Nome:</label>
+              <input type="text" name="name" id="edit-name">
+              <div class="grades">
+                <label for="note1">Nota 1:</label>
+                <input type="number" id="edit-note1">
+                <label for="note2">Nota 2:</label>
+                <input type="number" id="edit-note2">
+                <label for="note3">Nota 3:</label>
+                <input type="number" id="edit-note3">
+                <label for="note4">Nota 4:</label>
+                <input type="number" id="edit-note4">
+              </div>
+           <div class="btn-form">
+            <input type="submit">
+            <input type="button" value="Cancelar" id="cancel-edit">
+           </div>
+            </form>
+          </div>
+        </main>
+    
+    
+
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+ <!-- <span class="situation-student" style="background-color: #ffd400;">Pendente</span><button><i class="fa-regular fa-pen-to-square ${e.data().name}"></i></button><button><i class="fa-solid fa-trash"></i></button><button><i class="fa-regular fa-eye"></i></button> --> 

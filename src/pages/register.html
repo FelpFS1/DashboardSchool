@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/register.css" />
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+    <script defer
+      src="https://kit.fontawesome.com/456995a0f4.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>SignUp</title>
+  </head>
+  <body>
+    <main>
+      <div class="register">
+        <div class="register-img">
+          <img src="../img/registerImg.webp" alt="imagem de registro" />
+        </div>
+        <div id="line"></div>
+        <div class="password-float">
+          <p>Algo de errado com sua senha! Verifique as duas senhas!</p>
+          <p>Sua senha deve conter:
+            <ul>
+            <li>- No minimo 8 digitos</li>
+            <li>- Letra maiúscula</li>
+            <li>- Letra minúscula</li>
+            <li>- Número</li>
+            <li>- Caractere especial(ex: !@;:-_$)</li>
+          </ul>
+          </p>
+        </div>
+        <div class="register-sucess"><p>Eba! usuário cadastrado com sucesso!</p></div>
+        <div class="error-email"><p id="error-email"></p></div>
+        <form action="" method="post">
+          <h3>Registre-se para começar gerenciar seus alunos</h3>
+          <label for="fullname">Nome completo:</label>
+          <input type="text" name="full-name" id="fullname"  placeholder="Nome completo:">
+          
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            required
+            placeholder="Ex. Email@email.com"
+          />
+          <label for="pass" class="labelpass">Senha:</label>
+  
+          <input class="correct wrong"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Insira sua senha aqui!"
+            required
+          />
+          <div class="input-password">
+            
+          </div>
+          
+          <label for="password-again" class="labelpass">Senha:</label>
+          
+          <input class="correct wrong" type="password" name="password" id="password-again" placeholder="Insira sua senha novamente!" required/>
+          <i class="fa-regular fa-eye" alt="ver senha"></i>
+          <div class="buttons-form">
+            <button type="submit" id="register">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="../js/class/Register.js" type="module"></script>
+  
+  </body>
+</html>
