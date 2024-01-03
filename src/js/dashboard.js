@@ -233,7 +233,7 @@ window.onload = function loggedUserCheck() {
       document.querySelector(".logout").addEventListener("click", logout);
     } else {
       window.window.location.replace(
-        "http://127.0.0.1:5500/src/pages/login.html"
+        "../pages/login.html"
       );
     }
   });
