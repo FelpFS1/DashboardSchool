@@ -1,8 +1,8 @@
-# Student Management System
+# Sistema de gestão estudantil -- PROJETO EM ANDAMENTO
 
 ## Overview
 
-O Sistema de Gerenciamento de Alunos é uma aplicação simples e intuitiva projetada para facilitar o acompanhamento de informações dos alunos. Ele fornece funcionalidades básicas para adicionar, visualizar, atualizar e excluir registros de alunos, tornando o processo de gerenciamento mais eficiente.
+O Sistema de Gerenciamento de Alunos é uma aplicação bem simples e intuitiva projetada para facilitar o acompanhamento de informações dos alunos. Ele fornece funcionalidades básicas para adicionar, visualizar, atualizar e excluir registros de alunos, tornando o processo de gerenciamento mais eficiente.
 
 ## Funcionalidades Principais
 
