@@ -271,8 +271,10 @@ window.onload = function loggedUserCheck() {
 
       document.querySelector(".logout").addEventListener("click", logout);
     } else {
-      window.window.location.replace(
+      window.location.replace(
         "../pages/login.html"
+
+
       );
     }
   });
