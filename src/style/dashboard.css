@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik+Doodle+Shadow&display=swap');
+
 body {
+  width: 100vw;
+  height: 100vh;
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   background: #f8f9fa;
   color: #343a40;
+  background: url('..//img/backgound-body.webp') no-repeat ;
+  background-size: cover;
+  overflow: hidden;
+  
 }
 
 .dashboard-container {
@@ -11,7 +19,7 @@ body {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
+  background: #f8f9fa;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
@@ -28,7 +36,10 @@ body {
 }
 
 h1 {
-  color: #007bff;
+
+  font-family: 'Rubik Doodle Shadow',sans-serif;
+  font-size: 2.2rem;
+  
 }
 
 .header nav i{
@@ -99,7 +110,7 @@ nav #add-studentbtn {
   padding: 0;
 }
 
-.students-list li {
+.students-list #ul-students li {
   position: relative;
   background: #e9ecef;
   margin-bottom: 10px;
@@ -134,7 +145,8 @@ i:hover,.students-list #add-studentbtn:hover,.header nav:hover {
  
 
  .students-list .loading p{
-  font-size: larger;
+  font-size: 2.3rem;
+  color: #f8f9fa;
  }
  
  .students-list .show-loading {
@@ -295,6 +307,55 @@ i:hover,.students-list #add-studentbtn:hover,.header nav:hover {
   font-size: 1.2rem;
   bottom: 0.1rem;
   cursor: pointer;
+}
+
+.students-list #show-data-students{
+  display: none;
+  position: relative;
+  max-width: 700px;
+  height: 300px;
+  margin: auto;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  
+  
+}
+
+.students-list #show-data-students h3{
+  font-size: 1.5rem;
+  text-align: center;
+  
+}
+
+.students-list #show-data-students .style-span{
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 5.5rem);
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  padding: 8px;
+  background-color: #EBFFF4;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.students-list #show-data-students span{
+  font-size: 1.2rem;
+}
+
+.students-list #show-data-students #close-show{
+  position: relative;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #278AF2;
+  color: #FFFFFF;
+  cursor: pointer;
+  
 }
 
 

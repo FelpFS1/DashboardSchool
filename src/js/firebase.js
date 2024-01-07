@@ -1,5 +1,3 @@
-
-
 export function fireb(){
     return {
         apiKey: "AIzaSyCj4o5N3cnCDgLsB8H-N2B3VNp8cCB3ffU",

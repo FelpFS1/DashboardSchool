@@ -41,7 +41,8 @@ export class Students {
       name: this.name,
       notas: this.grades,
       situation: this.situation,
-      id:this.id
+      id:this.id,
+      media: this.#media
     };
   }
 

@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/style/index.css">
-    <title>GROUND</title>
+    <title>Seja bem vindo(a)</title>
 </head>
 <body>
     <header>
-        <h1 id="welcome"></h1>
-        <nav id=login> <a href="./auth/login.html">Login</a></nav>
+        <div id="logo"><h1>SCHOOL</h1></div>
+        <nav id=login>
+            <ul>
+                <li><a href="./pages/login.html" id="login-btn">Login</a></li>
+                <li><a href="./pages/register.html" id="register-btn">Registre-se</a></li>
+            </nav>
+            </ul>
     </header>
+    <main>
+        <div id="welcome">
+            <h3>Olá, seja bem vindo (a)!</h3>
+            <p>Uma aplicação simples e eficiente para gerenciar seus alunos!</p>
+            <button id="start"><a href="./pages/register.html">Comece já</a></button>
+        </div>
+    </main>
     <script src="./src/js/index.js" type="module"></script>
 </body>
 </html>

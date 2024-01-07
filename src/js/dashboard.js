@@ -29,23 +29,6 @@ window.onload = function loggedUserCheck() {
           });
       }
 
-      function deleteStudent(studentId) {
-        const user = firebase.auth().currentUser;
-        const uid = user.uid;
-
-        firebase
-          .firestore()
-          .collection(uid)
-          .doc(studentId)
-          .delete()
-          .then(() => {
-            console.log("Document successfully deleted!");
-          })
-          .catch((error) => {
-            console.error("Error removing document: ", error);
-          });
-      }
-
       function editStudent(studentId) {
         const user = firebase.auth().currentUser;
         const uid = user.uid;
@@ -77,7 +60,6 @@ window.onload = function loggedUserCheck() {
                   ]
                 );
                 student.id = studentId;
-                console.log(student);
                 firebase
                   .firestore()
                   .collection(uid)
@@ -95,6 +77,54 @@ window.onload = function loggedUserCheck() {
           .catch((error) => {
             console.log("Error getting document:", error);
           });
+      }
+
+      function deleteStudent(studentId) {
+        const user = firebase.auth().currentUser;
+        const uid = user.uid;
+
+        firebase
+          .firestore()
+          .collection(uid)
+          .doc(studentId)
+          .delete()
+          .then(() => {
+            console.log("Document successfully deleted!");
+          })
+          .catch((error) => {
+            console.error("Error removing document: ", error);
+          });
+      }
+
+      function showDataStudent(studentId){
+        const user = firebase.auth().currentUser;
+        const uid = user.uid;
+        const showData = document.getElementById('show-data-students').style.display = 'block';
+        const name = document.getElementById('show-name');
+        const notes = document.getElementById('show-notes');
+        const situation = document.getElementById('show-situation');
+        const media = document.getElementById('show-media');
+        const closeBtn = document.getElementById('close-show');
+
+        firebase
+          .firestore()
+          .collection(uid)
+          .doc(studentId)
+          .get().then((resp) => {
+            const data = resp.data()
+            name.innerText = data.name
+            notes.innerText = data.notas
+            situation.innerText = data.situation
+            media.innerText = data.media
+
+            closeBtn.addEventListener('click',() => {
+              const showData = document.getElementById('show-data-students').style.display = 'none';
+            })
+
+          }).catch((err) => {
+            console.log(err.message);
+          })
+
       }
 
       function clearFormAndHide(tag) {
@@ -163,7 +193,7 @@ window.onload = function loggedUserCheck() {
                   e.data().id
                 }" class="edit-button"><i class="fa-regular fa-pen-to-square"></i></button><button class="delete-student" title="delete" data-id="${
                   e.data().id
-                }"><i class="fa-solid fa-trash"></i></button><button title="show" data-id="${
+                }"><i class="fa-solid fa-trash"></i></button><button class ="show-data" title="show" data-id="${
                   e.data().id
                 }"><i class="fa-regular fa-eye"></i></button>`,
                 Pendente: `<span class="situation-student" style="background-color: #ffd400;">Pendente</span>${
@@ -172,7 +202,7 @@ window.onload = function loggedUserCheck() {
                   e.data().id
                 }" class="edit-button"><i class="fa-regular fa-pen-to-square"></i></button><button class="delete-student" title="delete" data-id="${
                   e.id
-                }"><i class="fa-solid fa-trash"></i></button><button title="show data-id="${
+                }"><i class="fa-solid fa-trash"></i></button><button class ="show-data" title="show" data-id="${
                   e.data().id
                 }"><i class="fa-regular fa-eye"></i></button>`,
                 Aprovado: `<span class="situation-student" style="background-color: #01b399;">Aprovado</span>${
@@ -181,7 +211,7 @@ window.onload = function loggedUserCheck() {
                   e.data().id
                 }" class="edit-button"> <i class="fa-regular fa-pen-to-square"></i></button><button class="delete-student" title="delete" data-id="${
                   e.data().id
-                }"><i class="fa-solid fa-trash"></i></button><button title="show" data-id="${
+                }"><i class="fa-solid fa-trash"></i></button><button class ="show-data" title="show" data-id="${
                   e.data().id
                 }"><i class="fa-regular fa-eye"></i></button>`,
               };
@@ -214,6 +244,15 @@ window.onload = function loggedUserCheck() {
                 .addEventListener("click", () => {
                   cancelEditOrAddStudent("add-students");
                 });
+
+
+              // EVENDO PARA VER OS DADOS DO ALUNO
+              const  showButton = li.querySelector(".show-data");
+
+              showButton.addEventListener('click',(e) => {
+                const studentId = e.currentTarget.getAttribute("data-id");
+                showDataStudent(studentId)
+              })
             });
           });
       });
