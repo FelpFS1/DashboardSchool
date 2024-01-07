@@ -14,7 +14,7 @@ O Sistema de Gerenciamento de Alunos é uma aplicação bem simples e intuitiva 
 
 1. **Adicionar Aluno:** Registre novos alunos incluindo informações como nome, idade, e curso.
 2. **Visualizar Alunos:** Veja uma lista completa de todos os alunos cadastrados.
-3. **Atualizar Informações:** Modifique dados existentes, como a idade ou curso de um aluno.
+3. **Atualizar Informações:** Modifique dados existentes, como o nome ou notas de um aluno.
 4. **Excluir Aluno:** Remova registros de alunos quando necessário.
 
 ## Tecnologias Utilizadas
