@@ -1,7 +1,7 @@
 # Sistema de gestão estudantil -- PROJETO EM ANDAMENTO
 ## Preview GIF
 <div align="center">
-<img src="[https://gifyu.com/image/S02Vr](https://github.com/FelpFS1/DashboardSchool/assets/97350613/5359b60e-de13-46d6-9d28-73359bbbf7aa)" width="700px" />
+<img src="https://gifyu.com/image/S02Vr](https://github.com/FelpFS1/DashboardSchool/assets/97350613/5359b60e-de13-46d6-9d28-73359bbbf7aa" width="700px" />
 </div
 
 ## Overview
