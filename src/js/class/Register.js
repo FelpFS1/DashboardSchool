@@ -46,7 +46,7 @@ class Register {
             email: this.email,
           });
           window.location.replace(
-            "https://schooldash.vercel.app/pages/register.html")
+            "https://schooldash.vercel.app/pages/login.html")
         })
         .catch((error) => {
           const err = {
