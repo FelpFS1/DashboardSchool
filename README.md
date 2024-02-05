@@ -25,12 +25,6 @@ O Sistema de Gerenciamento de Alunos é uma aplicação bem simples e intuitiva 
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests.
 
-## Licença
-
-Este projeto é licenciado sob a ...
-
----
-
 **Nota:** Este é um projeto simples para fins educacionais. Sinta-se à vontade para expandi-lo e adaptá-lo de acordo com suas necessidades.
 
 **Aproveite o Gerenciamento de Alunos!** 📚✨
